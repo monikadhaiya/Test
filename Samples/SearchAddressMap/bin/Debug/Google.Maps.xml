@@ -1,0 +1,1262 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Google.Maps</name>
+    </assembly>
+    <members>
+        <member name="T:Google.Maps.Avoid">
+            <summary>
+            Directions may be calculated that adhere to certain restrictions. 
+            Restrictions are indicated by use of the avoid parameter, and an 
+            argument to that parameter indicating the restriction to avoid.
+            </summary>
+        </member>
+        <member name="F:Google.Maps.Avoid.none">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Google.Maps.Avoid.highways">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Google.Maps.Avoid.tolls">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Google.Maps.Avoid.ferries">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Google.Maps.Direction.DirectionRequest.AddWaypoint(Google.Maps.Location)">
+            <summary>
+            Adds a waypoint to the current request.
+            </summary>
+            <remarks>Google's API specifies 8 maximum for non-business (free) consumers, and up to 23 for (registered) business customers</remarks>
+            <param name="waypoint"></param>
+        </member>
+        <member name="P:Google.Maps.Direction.DirectionRequest.Origin">
+            <summary>
+            The <see cref="T:Google.Maps.Location"/> from which you wish to calculate directions.
+            </summary>
+        </member>
+        <member name="P:Google.Maps.Direction.DirectionRequest.Destination">
+            <summary>
+            The <see cref="T:Google.Maps.Location"/> from which you wish to calculate directions.
+            </summary>
+        </member>
+        <member name="P:Google.Maps.Direction.DirectionRequest.Mode">
+            <summary>
+            Specifies the mode of transport to use when calculating directions. Valid values are specified in <see cref="T:Google.Maps.TravelMode"/>s. 
+            </summary>
+        </member>
+        <member name="P:Google.Maps.Direction.DirectionRequest.Avoid">
+            <summary>
+            (optional) Directions may be calculated that adhere to certain restrictions.
+            </summary>
+        </member>
+        <member name="P:Google.Maps.Direction.DirectionRequest.Alternatives">
+            <summary>
+            (optional) If set to true, specifies that the Directions service may provide more than one route alternative in the response. 
+            Note that providing route alternatives may increase the response time from the server.
+            </summary>
+        </member>
+        <member name="P:Google.Maps.Direction.DirectionRequest.Region">
+            <summary>The region code, specified as a ccTLD ("top-level domain") two-character value. See also Region biasing.</summary>
+            <see cref="!:http://code.google.com/apis/maps/documentation/directions/#RequestParameters"/>
+            <seealso cref="!:https://developers.google.com/maps/documentation/directions/#RegionBiasing"/>
+        </member>
+        <member name="P:Google.Maps.Direction.DirectionRequest.Language">
+            <summary>The language in which to return results. See the list of supported domain languages. 
+            Note that we often update supported languages so this list may not be exhaustive. 
+            If language is not supplied, the service will attempt to use the native language of the domain from which the request is sent.</summary>
+            <see cref="!:http://code.google.com/apis/maps/documentation/directions/#RequestParameters"/>
+        </member>
+        <member name="P:Google.Maps.Direction.DirectionRequest.Sensor">
+            <summary>
+             Indicates whether or not the directions request comes from a device with a location sensor. This value must be either true or false.
+            </summary>
+        </member>
+        <member name="T:Google.Maps.Direction.DirectionService">
+            <summary>
+            
+            
+            
+            </summary>
+            <see cref="!:"/>
+        </member>
+        <member name="T:Google.Maps.DistanceMatrix.DistanceMatrixRequest">
+            <summary>
+            Provides a request for the Google Distance Matrix web service.
+            </summary>
+        </member>
+        <member name="F:Google.Maps.DistanceMatrix.DistanceMatrixRequest.waypointsOrigin">
+            <summary>
+             List of origin waypoints
+            </summary>
+        </member>
+        <member name="F:Google.Maps.DistanceMatrix.DistanceMatrixRequest.waypointsDestination">
+            <summary>
+            List of destination waypoints
+            </summary>
+        </member>
+        <member name="M:Google.Maps.DistanceMatrix.DistanceMatrixRequest.AddOrigin(Google.Maps.Waypoint)">
+            <summary>
+            
+            </summary>
+            <param name="destination"></param>
+        </member>
+        <member name="M:Google.Maps.DistanceMatrix.DistanceMatrixRequest.AddDestination(Google.Maps.Waypoint)">
+            <summary>
+            
+            </summary>
+            <param name="destination"></param>
+        </member>
+        <member name="M:Google.Maps.DistanceMatrix.DistanceMatrixRequest.WaypointsToUri(System.Collections.Generic.SortedList{System.Int32,Google.Maps.Waypoint})">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Google.Maps.DistanceMatrix.DistanceMatrixRequest.ToUri">
+            <summary>
+            Create URI for quering
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Google.Maps.DistanceMatrix.DistanceMatrixRequest.Mode">
+            <summary>
+            (optional) Specifies what mode of transport to use when calculating directions.
+            </summary>
+        </member>
+        <member name="P:Google.Maps.DistanceMatrix.DistanceMatrixRequest.Avoid">
+            <summary>
+            (optional) Directions may be calculated that adhere to certain restrictions.
+            </summary>
+        </member>
+        <member name="P:Google.Maps.DistanceMatrix.DistanceMatrixRequest.Units">
+            <summary>
+             (optional) Specifies the unit system to use when expressing distance as text.
+              <see cref="!:http://code.google.com/intl/it-IT/apis/maps/documentation/distancematrix/#unit_systems"/>
+            </summary>
+        </member>
+        <member name="P:Google.Maps.DistanceMatrix.DistanceMatrixRequest.Language">
+            <summary>
+            (optional) The language in which to return results.
+            <see cref="!:http://code.google.com/apis/maps/faq.html#languagesupport"/>
+            </summary>
+        </member>
+        <member name="P:Google.Maps.DistanceMatrix.DistanceMatrixRequest.Sensor">
+            <summary>
+             
+             
+            </summary>
+        </member>
+        <member name="P:Google.Maps.DistanceMatrix.DistanceMatrixRequest.WaypointsOrigin">
+            <summary>
+            Accessor method
+            </summary>
+        </member>
+        <member name="P:Google.Maps.DistanceMatrix.DistanceMatrixRequest.WaypointsDestination">
+            <summary>
+            Accessor method
+            </summary>
+        </member>
+        <member name="T:Google.Maps.DistanceMatrix.DistanceMatrixResponse">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Google.Maps.DistanceMatrix.DistanceMatrixResponse.DistanceMatrixRows">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Google.Maps.DistanceMatrix.DistanceMatrixResponse.DistanceMatrixElement">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Google.Maps.DistanceMatrix.DistanceMatrixService">
+            <summary>
+            The Google Distance Matrix API is a service that provides travel distance and time for a matrix of origins and destinations. The information returned is based on the recommended route 
+            between start and end points, as calculated by the Google Maps API, and consists of rows containing duration and distance values for each pair.
+            <para>This service does not return detailed route information. Route information can be obtained by passing the desired single origin and destination to the Directions API.</para>
+            </summary>
+            <see cref="!:http://developers.google.com/maps/documentation/distancematrix/"/>
+        </member>
+        <member name="T:Google.Maps.Elevation.ElevationRequest">
+            <summary>
+            Provides a request for the Google Maps Elevation web service.
+            </summary>
+        </member>
+        <member name="M:Google.Maps.Elevation.ElevationRequest.AddLocations(Google.Maps.LatLng[])">
+            <summary>
+            Easy way to add locations to the Locations collection.
+            </summary>
+            <param name="locationCollection"></param>
+        </member>
+        <member name="P:Google.Maps.Elevation.ElevationRequest.Locations">
+            <summary>
+            Defines the location(s) on the earth from which to return elevation
+            data. This parameter takes either a single location as a
+            comma-separated {latitude,longitude} pair (e.g. "40.714728,-73.998672")
+            or multiple latitude/longitude pairs passed as an array or as an
+            encoded polyline.
+            </summary>
+            <remarks>Required if path not present.</remarks>
+            <see cref="!:http://code.google.com/apis/maps/documentation/elevation/#Locations"/>
+        </member>
+        <member name="P:Google.Maps.Elevation.ElevationRequest.Path">
+            <summary>
+            Defines a path on the earth for which to return elevation data.
+            This parameter defines a set of two or more ordered {latitude,
+            longitude} pairs defining a path along the surface of the earth.
+            This parameter must be used in conjunction with the samples
+            parameter.
+            </summary>
+            <remarks>Required if locations not present.</remarks>
+            <see cref="!:http://code.google.com/apis/maps/documentation/elevation/#Paths"/>
+        </member>
+        <member name="P:Google.Maps.Elevation.ElevationRequest.Samples">
+            <summary>
+            specifies the number of sample points along a path for which to return
+            elevation data. The samples parameter divides the given path into an
+            ordered set of equidistant points along the path.
+            </summary>
+            <remarks>Required if a path is specified.</remarks>
+        </member>
+        <member name="P:Google.Maps.Elevation.ElevationRequest.Sensor">
+            <summary>
+            Specifies whether the application requesting elevation data is
+            using a sensor to determine the user's location. This parameter
+            is required for all elevation requests.
+            </summary>
+            <remarks>Required.</remarks>
+            <see cref="!:http://code.google.com/apis/maps/documentation/elevation/#Sensor"/>
+        </member>
+        <member name="T:Google.Maps.Elevation.ElevationService">
+            <summary>
+            The Elevation service provides elevation data for all locations on the surface of the earth, including depth locations on the ocean floor (which return negative values). 
+            In those cases where Google does not possess exact elevation measurements at the precise location you request, the service will interpolate and return an averaged value
+            using the four nearest locations.
+            </summary>
+            <see cref="!:http://code.google.com/apis/maps/documentation/elevation/"/>
+        </member>
+        <member name="M:Google.Maps.Elevation.ElevationService.GetResponse(Google.Maps.Elevation.ElevationRequest)">
+            <summary>
+            Sends the specified request to the Google Maps Elevation web
+            service and parses the response as an ElevationResponse
+            object.
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Google.Maps.Geocoding.AddressComponent.LongName">
+            <summary>
+            The full text description or name of the address component as
+            returned by the Geocoder.
+            </summary>
+        </member>
+        <member name="P:Google.Maps.Geocoding.AddressComponent.ShortName">
+            <summary>
+            An abbreviated textual name for the address component, if available.
+            For example, an address component for the state of Alaska may have
+            a short_name of "AK" using the 2-letter postal abbreviation.
+            </summary>
+        </member>
+        <member name="P:Google.Maps.Geocoding.AddressComponent.Types">
+            <summary>
+            Indicates the type of address component. This array contains a set
+            of one or more tags.
+            </summary>
+        </member>
+        <member name="F:Google.Maps.Geocoding.AddressType.StreetAddress">
+            <summary>
+            Indicates a precise street address.
+            </summary>
+        </member>
+        <member name="F:Google.Maps.Geocoding.AddressType.Route">
+            <summary>
+            Indicates a named route (such as "US 101").
+            </summary>
+        </member>
+        <member name="F:Google.Maps.Geocoding.AddressType.Intersection">
+            <summary>
+            Indicates a major intersection, usually of two major roads.
+            </summary>
+        </member>
+        <member name="F:Google.Maps.Geocoding.AddressType.Political">
+            <summary>
+            Indicates a political entity. Usually, this type indicates a polygon of
+            some civil administration.
+            </summary>
+        </member>
+        <member name="F:Google.Maps.Geocoding.AddressType.Country">
+            <summary>
+            Indicates the national political entity, and is typically the highest
+            order type returned by the Geocoder.
+            </summary>
+        </member>
+        <member name="F:Google.Maps.Geocoding.AddressType.AdministrativeAreaLevel1">
+            <summary>
+            Indicates a first-order civil entity below the country level. Within the
+            United States, these administrative levels are states. Not all nations
+            exhibit these administrative levels.
+            </summary>
+        </member>
+        <member name="F:Google.Maps.Geocoding.AddressType.AdministrativeAreaLevel2">
+            <summary>
+            Indicates a second-order civil entity below the country level. Within the
+            United States, these administrative levels are counties. Not all nations
+            exhibit these administrative levels.
+            </summary>
+        </member>
+        <member name="F:Google.Maps.Geocoding.AddressType.AdministrativeAreaLevel3">
+            <summary>
+            Indicates a third-order civil entity below the country level. This type
+            indicates a minor civil division. Not all nations exhibit these
+            administrative levels.
+            </summary>
+        </member>
+        <member name="F:Google.Maps.Geocoding.AddressType.ColloquialArea">
+            <summary>
+            Indicates a commonly-used alternative name for the entity.
+            </summary>
+        </member>
+        <member name="F:Google.Maps.Geocoding.AddressType.Locality">
+            <summary>
+            Indicates an incorporated city or town political entity.
+            </summary>
+        </member>
+        <member name="F:Google.Maps.Geocoding.AddressType.Sublocality">
+            <summary>
+            Indicates an first-order civil entity below a locality.
+            </summary>
+        </member>
+        <member name="F:Google.Maps.Geocoding.AddressType.Neighborhood">
+            <summary>
+            Indicates a named neighborhood.
+            </summary>
+        </member>
+        <member name="F:Google.Maps.Geocoding.AddressType.Premise">
+            <summary>
+            Indicates a named location, usually a building or collection of
+            buildings with a common name.
+            </summary>
+        </member>
+        <member name="F:Google.Maps.Geocoding.AddressType.Subpremise">
+            <summary>
+            Indicates a first-order entity below a named location, usually a
+            singular building within a collection of buildings with a common
+            name.
+            </summary>
+        </member>
+        <member name="F:Google.Maps.Geocoding.AddressType.PostalCode">
+            <summary>
+            Indicates a postal code as used to address postal mail within the
+            country.
+            </summary>
+        </member>
+        <member name="F:Google.Maps.Geocoding.AddressType.NaturalFeature">
+            <summary>
+            Indicates a prominent natural feature.
+            </summary>
+        </member>
+        <member name="F:Google.Maps.Geocoding.AddressType.Airport">
+            <summary>
+            Indicates an airport.
+            </summary>
+        </member>
+        <member name="F:Google.Maps.Geocoding.AddressType.Park">
+            <summary>
+            Indicates a named park.
+            </summary>
+        </member>
+        <member name="F:Google.Maps.Geocoding.AddressType.PointOfInterest">
+            <summary>
+            Indicates a named point of interest. Typically, these "POI"s are
+            prominent local entities that don't easily fit in another category
+            such as "Empire State Building" or "Statue of Liberty."
+            </summary>
+        </member>
+        <member name="F:Google.Maps.Geocoding.AddressType.PostBox">
+            <summary>
+            Indicates a specific postal box.
+            </summary>
+        </member>
+        <member name="F:Google.Maps.Geocoding.AddressType.StreetNumber">
+            <summary>
+            Indicates the precise street number.
+            </summary>
+        </member>
+        <member name="F:Google.Maps.Geocoding.AddressType.Floor">
+            <summary>
+            Indicates the floor of a building address.
+            </summary>
+        </member>
+        <member name="F:Google.Maps.Geocoding.AddressType.Room">
+            <summary>
+            Indicates the room of a building address.
+            </summary>
+        </member>
+        <member name="F:Google.Maps.Geocoding.AddressType.PostalTown">
+            <summary>
+            (Not documented) Indicates the Postal Town (nearest large town / city for UK addresses)
+            </summary>
+        </member>
+        <member name="F:Google.Maps.Geocoding.AddressType.PostalCodePrefix">
+            <summary>
+            (Not documented) First half of postcode for the UK
+            </summary>
+        </member>
+        <member name="P:Google.Maps.Geocoding.Geometry.Location">
+            <summary>
+            Contains the geocoded latitude,longitude value. For normal address
+            lookups, this field is typically the most important.
+            </summary>
+        </member>
+        <member name="P:Google.Maps.Geocoding.Geometry.LocationType">
+            <summary>
+            Stores additional data about the specified location.
+            </summary>
+        </member>
+        <member name="P:Google.Maps.Geocoding.Geometry.Viewport">
+            <summary>
+            Contains the recommended viewport for displaying the returned
+            result, specified as two latitude,longitude values defining the
+            southwest and northeast corner of the viewport bounding box.
+            Generally the viewport is used to frame a result when displaying
+            it to a user.
+            </summary>
+        </member>
+        <member name="P:Google.Maps.Geocoding.Geometry.Bounds">
+            <summary>
+            The precise bounds of the geocoding result, if applicable. Null if not.
+            </summary>
+        </member>
+        <member name="T:Google.Maps.Geocoding.GeocodingRequest">
+            <summary>
+            Provides a request for the Google Maps Geocoding web service.
+            </summary>
+        </member>
+        <member name="P:Google.Maps.Geocoding.GeocodingRequest.Address">
+            <summary>
+            The address that you want to geocode.  Use LatLng to perform a reverse geocoding request.
+            </summary>
+            <see cref="!:http://code.google.com/apis/maps/documentation/geocoding/#ReverseGeocoding"/>
+            <remarks>Required if latlng not present.</remarks>
+        </member>
+        <member name="P:Google.Maps.Geocoding.GeocodingRequest.Components">
+            <summary>
+            Undocumented address component filters.
+            Only geocoding results matching the component filters will be returned.
+            </summary>
+            <remarks>IE: country:uk|locality:stathern</remarks>
+        </member>
+        <member name="P:Google.Maps.Geocoding.GeocodingRequest.Bounds">
+            <summary>
+            The bounding box of the viewport within which to bias geocode
+            results more prominently.
+            </summary>
+            <remarks>
+            Optional. This parameter will only influence, not fully restrict, results
+            from the geocoder.
+            </remarks>
+            <see cref="!:http://code.google.com/apis/maps/documentation/geocoding/#Viewports"/>
+        </member>
+        <member name="P:Google.Maps.Geocoding.GeocodingRequest.Region">
+            <summary>
+            The region code, specified as a ccTLD ("top-level domain")
+            two-character value.
+            </summary>
+            <remarks>
+            Optional. This parameter will only influence, not fully restrict, results
+            from the geocoder.
+            </remarks>
+            <see cref="!:http://code.google.com/apis/maps/documentation/geocoding/#RegionCodes"/>
+        </member>
+        <member name="P:Google.Maps.Geocoding.GeocodingRequest.Language">
+            <summary>
+            The language in which to return results. If language is not
+            supplied, the geocoder will attempt to use the native language of
+            the domain from which the request is sent wherever possible.
+            </summary>
+            <remarks>Optional.</remarks>
+            <see cref="!:http://code.google.com/apis/maps/faq.html#languagesupport"/>
+        </member>
+        <member name="P:Google.Maps.Geocoding.GeocodingRequest.Sensor">
+            <summary>
+            Indicates whether or not the geocoding request comes from a device
+            with a location sensor. This value must be either true or false.
+            </summary>
+            <remarks>Required.</remarks>
+        </member>
+        <member name="P:Google.Maps.Geocoding.Result.Types">
+            <summary>
+            Indicates the type of the returned result. This array contains a
+            set of one or more tags identifying the type of feature returned
+            in the result. For example, a geocode of "Chicago" returns
+            "locality" which indicates that "Chicago" is a city, and also
+            returns "political" which indicates it is a political entity.
+            </summary>
+        </member>
+        <member name="P:Google.Maps.Geocoding.Result.FormattedAddress">
+            <summary>
+            A string containing the human-readable address of this location.
+            Often this address is equivalent to the "postal address," which
+            sometimes differs from country to country. (Note that some
+            countries, such as the United Kingdom, do not allow distribution
+            of true postal addresses due to licensing restrictions.) This
+            address is generally composed of one or more address components.
+            </summary>
+        </member>
+        <member name="P:Google.Maps.Geocoding.Result.AddressComponents">
+            <summary>
+            An array containing the separate address components.  For example,
+            the address "111 8th Avenue, New York, NY" contains separate
+            address components for "111" (the street number, "8th Avenue" (the
+            route), "New York" (the city) and "NY" (the US state).
+            </summary>
+        </member>
+        <member name="T:Google.Maps.GMapsImageFormats">
+            <summary>
+            Represents the different image formats available from the Google Maps API.
+            </summary>
+        </member>
+        <member name="F:Google.Maps.GMapsImageFormats.PNG">
+            <summary>
+            (default) specifies the 8-bit PNG format
+            </summary>
+        </member>
+        <member name="F:Google.Maps.GMapsImageFormats.PNG8">
+            <summary>
+            specifies the 8-bit PNG format
+            </summary>
+        </member>
+        <member name="F:Google.Maps.GMapsImageFormats.PNG32">
+            <summary>
+            specifies the 32-bit PNG format
+            </summary>
+        </member>
+        <member name="F:Google.Maps.GMapsImageFormats.GIF">
+            <summary>
+            specifies the GIF format
+            </summary>
+        </member>
+        <member name="F:Google.Maps.GMapsImageFormats.JPG">
+            <summary>
+            specifies the JPEG compression format
+            </summary>
+        </member>
+        <member name="F:Google.Maps.GMapsImageFormats.JPGbaseline">
+            <summary>
+            specifies a non-progressive JPEG compression format
+            </summary>
+        </member>
+        <member name="T:Google.Maps.GoogleSigned">
+            <summary>
+            Stores a Google Business API customer's signing information to be passed with service requests to Google's APIs.
+            </summary>
+            <remarks>
+            Use GoogleSigned.AssignAllServices() method to attach the signing information to all outgoing requests, usually during App Startup.
+            </remarks>
+        </member>
+        <member name="F:Google.Maps.GoogleSigned.S_universalSigningInstance">
+            <summary>
+            Used by all the services except Geolocation API and Places API
+            </summary>
+        </member>
+        <member name="M:Google.Maps.GoogleSigned.AssignAllServices(Google.Maps.GoogleSigned)">
+            <summary>
+            Assigns the given SigningInstance to all services that can utilize it.  Note that some of the services do not currently use the signature method.
+            </summary>
+            <param name="signingInstance"></param>
+        </member>
+        <member name="P:Google.Maps.GoogleSigned.SigningInstance">
+            <summary>
+            Gets or sets the GoogleSigned instance to use for all of the various service calls.
+            </summary>
+        </member>
+        <member name="T:Google.Maps.Internal.Http">
+            <summary>
+            Provides an intuitive and simple HTTP client wrapper.
+            </summary>
+        </member>
+        <member name="F:Google.Maps.Internal.Http.Factory">
+            <summary>
+            Gets or sets the factory that provides HttpGetResponse instances. Crude depency injection for the time being.
+            </summary>
+        </member>
+        <member name="T:Google.Maps.Internal.Http.HttpGetResponseFactory">
+            <summary>
+            A factory class for building HttpGetResponse instances.
+            </summary>
+        </member>
+        <member name="M:Google.Maps.Internal.Http.HttpGetResponseFactory.CreateResponse(System.Uri)">
+            <summary>
+            Builds a standard HttpGetResponse instance.
+            </summary>
+            <param name="uri"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Google.Maps.Internal.QueryStringBuilder.Append(System.String,System.String)">
+            <summary>
+            Appends a key/value pair when the value isn't null.
+            </summary>
+            <param name="key"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Google.Maps.Internal.QueryStringBuilder.Append(System.String)">
+            <summary>
+            Appends a value when the string isn't null.
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Google.Maps.Location">
+            <summary>
+            A general free-text location, usually for specifying an address or particular place for Google Maps.
+            </summary>
+        </member>
+        <member name="M:Google.Maps.Location.#ctor(System.String)">
+            <summary>
+            Creates a location instance for an address specified as text.
+            </summary>
+            <param name="value"></param>
+        </member>
+        <member name="M:Google.Maps.Location.ToString">
+            <summary>
+            Returns the string representation of the current instance.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Google.Maps.Location.GetAsUrlParameter">
+            <summary>
+            Gets the current instance as a URL encoded value.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Google.Maps.Location.op_Implicit(System.String)~Google.Maps.Location">
+            <summary>
+            implicitly converts a System.String to Google.Maps.Location
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Google.Maps.LatLng.#ctor(System.Decimal,System.Decimal)">
+            <summary>
+            Create a new latlng instance with the given latitude and longitude coordinates.
+            </summary>
+            <param name="latitude"></param>
+            <param name="longitude"></param>
+        </member>
+        <member name="M:Google.Maps.LatLng.#ctor(System.Double,System.Double)">
+            <summary>
+            Create a new latlng instance with the given latitude and longitude coordinates.
+            </summary>
+            <param name="latitude"></param>
+            <param name="longitude"></param>
+        </member>
+        <member name="M:Google.Maps.LatLng.#ctor(System.Single,System.Single)">
+            <summary>
+            Create a new latlng instance with the given latitude and longitude coordinates.
+            </summary>
+            <param name="latitude"></param>
+            <param name="longitude"></param>
+        </member>
+        <member name="M:Google.Maps.LatLng.ToString">
+            <summary>
+            Gets the string representation of the latitude and longitude coordinates.  Default format is "N6" for 6 decimal precision.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Google.Maps.LatLng.ToString(System.String)">
+            <summary>
+            Gets the string representation of the latitude and longitude coordinates.  The format is applies to a System.Double, so any format applicable for System.Double will work.
+            </summary>
+            <param name="format"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Google.Maps.LatLng.GetAsUrlParameter">
+            <summary>
+            Gets the current instance as a URL encoded value.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Google.Maps.LatLng.Parse(System.String)">
+            <summary>
+            Parses a LatLng from a set of latitude/longitude coordinates
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Google.Maps.LatLng.Latitude">
+            <summary>
+            Gets or sets the latitude coordinate
+            </summary>
+        </member>
+        <member name="P:Google.Maps.LatLng.Longitude">
+            <summary>
+            Gets or sets the longitude coordinate
+            </summary>
+        </member>
+        <member name="T:Google.Maps.MapMarkers">
+            <summary>
+            Represents a set of location markers to be drawn on a map with certain style properties.
+            </summary>
+        </member>
+        <member name="M:Google.Maps.MapMarkers.#ctor(Google.Maps.Location[])">
+            <summary>
+            Creates a MapMarkers instance with the given Locations.
+            </summary>
+            <param name="locations"></param>
+        </member>
+        <member name="P:Google.Maps.MapMarkers.MarkerSize">
+            <summary>
+            Gets or sets the size of marker from the set {tiny, mid, small}. If no size parameter is set, the marker will appear in its default (normal) size. (optional)
+            </summary>
+        </member>
+        <member name="P:Google.Maps.MapMarkers.Label">
+            <summary>
+            Gets or sets the label for the markers.  This specifies a single uppercase alphanumeric character from the set {A-Z, 0-9}. (The requirement for uppercase characters is new to the 3.7 version of the API.) 
+            Note that default and mid sized markers are the only markers capable of displaying an alphanumeric-character parameter. tiny and small markers are not capable of displaying an alphanumeric-character.
+            (optional)
+            </summary>
+        </member>
+        <member name="P:Google.Maps.MapMarkers.Color">
+            <summary>
+            Gets or sets the color for the markers.  This property specifies a 24-bit color (example: color=0xFFFFCC) 
+            or a predefined color from the set {black, brown, green, purple, yellow, blue, gray, orange, red, white}.
+            (optional)
+            </summary>
+        </member>
+        <member name="P:Google.Maps.MapMarkers.Locations">
+            <summary>
+            Gets the collection of Locations for the current style of map markers.
+            </summary>
+        </member>
+        <member name="P:Google.Maps.MapMarkers.IconUrl">
+            <summary>
+            Gets or sets the URL for the icon.  This specifies a URL to use as the marker's custom icon. 
+            Images may be in PNG, JPEG or GIF formats, though PNG is recommended. 
+            (optional)
+            </summary>
+            <remarks>
+            The icon parameter must be specified using a URL (which should be URL-encoded). You may use any valid URL 
+            of your choosing, or a URL-shortening service such as http://bit.ly or http://tinyurl.com. Most URL-shortening 
+            services have the advantage of automatically encoding URLs. Icons are limited to sizes of 4096 pixels (64x64 for square images), 
+            and the Static Maps service allows up to five unique custom icons per request. Note that each of these unique icons 
+            may be used multiple times within the static map. Custom icons that have a shadow:true descriptor (the default) will have 
+            their "anchor point" set as the bottom center of the provided icon image, from which the shadow is cast. Icons without 
+            a shadow (setting a shadow:false descriptor) are instead assumed to be icons centered on their specified locations, 
+            so their anchor points are set as the center of the image.
+            </remarks>
+        </member>
+        <member name="P:Google.Maps.MapMarkers.Shadow">
+            <summary>
+            Gets or sets the flag for building a shadow.  When true (the default value), this indicates that the Static Maps service should construct an appropriate 
+            shadow for the image. This shadow is based on the image's visible region and its opacity/transparency. (optional)
+            </summary>
+        </member>
+        <member name="T:Google.Maps.MapMarkersCollection">
+            <summary>
+            Contains a collection of <see cref="T:Google.Maps.MapMarkers"/>.
+            </summary>
+        </member>
+        <member name="T:Google.Maps.MapTypes">
+            <summary>
+            The available map types for the current Google Maps API.
+            </summary>
+        </member>
+        <member name="F:Google.Maps.MapTypes.Unspecified">
+            <summary>
+            Unspecified
+            </summary>
+        </member>
+        <member name="F:Google.Maps.MapTypes.Roadmap">
+            <summary>
+            Roadmap
+            </summary>
+        </member>
+        <member name="F:Google.Maps.MapTypes.Satellite">
+            <summary>
+            Satellite
+            </summary>
+        </member>
+        <member name="F:Google.Maps.MapTypes.Hybrid">
+            <summary>
+            Hybrid
+            </summary>
+        </member>
+        <member name="F:Google.Maps.MapTypes.Terrain">
+            <summary>
+            Terrain
+            </summary>
+        </member>
+        <member name="T:Google.Maps.MarkerSizes">
+            <summary>
+            The set of marker sizes available for the current Google Maps API.
+            </summary>
+        </member>
+        <member name="F:Google.Maps.MarkerSizes.Unspecified">
+            <summary>
+            Unspecified
+            </summary>
+        </member>
+        <member name="F:Google.Maps.MarkerSizes.Tiny">
+            <summary>
+            Tiny
+            </summary>
+        </member>
+        <member name="F:Google.Maps.MarkerSizes.Mid">
+            <summary>
+            Mid
+            </summary>
+        </member>
+        <member name="F:Google.Maps.MarkerSizes.Small">
+            <summary>
+            Small
+            </summary>
+        </member>
+        <member name="F:Google.Maps.MarkerSizes.Normal">
+            <summary>
+            Normal (default)
+            </summary>
+        </member>
+        <member name="P:Google.Maps.Path.Weight">
+            <summary>
+            specifies the thickness of the path in pixels. If no weight parameter is set, the path will appear in its default thickness (5 pixels).
+            </summary>
+        </member>
+        <member name="P:Google.Maps.Path.Color">
+            <summary>
+            (optional) specifies a color either as a 24-bit (example: color=0xFFFFCC) or 32-bit hexadecimal value (example: color=0xFFFFCCFF), 
+            or from the set {black, brown, green, purple, yellow, blue, gray, orange, red, white}.  Default opacity appears to be 50%. 
+            </summary>
+        </member>
+        <member name="P:Google.Maps.Path.FillColor">
+            <summary>
+            indicates both that the path marks off a polygonal area and specifies the fill color to use as an overlay within that area. The 
+            set of locations following need not be a "closed" loop; the Static Map server will automatically join the first and last points. 
+            Note, however, that any stroke on the exterior of the filled area will not be closed unless you specifically provide the same 
+            beginning and end location.
+            </summary>
+        </member>
+        <member name="P:Google.Maps.Path.Points">
+            <summary>
+            Gets or sets the collection of points for this path
+            </summary>
+        </member>
+        <member name="P:Google.Maps.Path.Encode">
+            <summary>
+            Indicates if the paths should be encoded using the Polyline Encoding Algorithm.
+            </summary>
+            <remarks>
+            The library may decide to encode automatically if the number of points is above a certain threshold.
+            http://code.google.com/apis/maps/documentation/utilities/polylinealgorithm.html
+            </remarks>
+        </member>
+        <member name="M:Google.Maps.PolylineEncoder.EncodeCoordinates(System.Collections.Generic.IEnumerable{Google.Maps.LatLng})">
+            <summary>
+            Encodes the list of coordinates to a Google Maps encoded coordinate string.
+            </summary>
+            <param name="coordinates">The coordinates.</param>
+            <returns>Encoded coordinate string</returns>
+        </member>
+        <member name="M:Google.Maps.PolylineEncoder.Decode(System.String)">
+            <summary>
+            Decode encoded polyline information to a collection of <see cref="T:Google.Maps.LatLng"/> instances.
+            </summary>
+            <param name="value">ASCII string</param>
+            <returns></returns>
+        </member>
+        <member name="M:Google.Maps.PolylineEncoder.EncodeSignedNumber(System.Int32)">
+            <summary>
+            Encode a signed number in the encode format.
+            </summary>
+            <param name="num">The signed number</param>
+            <returns>The encoded string</returns>
+        </member>
+        <member name="M:Google.Maps.PolylineEncoder.EncodeNumber(System.Int32)">
+            <summary>
+            Encode an unsigned number in the encode format.
+            </summary>
+            <param name="num">The unsigned number</param>
+            <returns>The encoded string</returns>
+        </member>
+        <member name="F:Google.Maps.ServiceResponseStatus.Ok">
+            <summary>
+            Indicates that no errors occurred; the address was successfully 
+            parsed and at least one geocode was returned.
+            </summary>
+        </member>
+        <member name="F:Google.Maps.ServiceResponseStatus.InvalidRequest">
+            <summary>
+            Indicating the service request was malformed.
+            </summary>
+        </member>
+        <member name="F:Google.Maps.ServiceResponseStatus.ZeroResults">
+            <summary>
+            Indicates that the geocode was successful but returned no results.
+            This may occur if the geocode was passed a non-existent address or
+            a latlng in a remote location.
+            </summary>
+        </member>
+        <member name="F:Google.Maps.ServiceResponseStatus.OverQueryLimit">
+            <summary>
+            Indicates that you are over your quota.
+            </summary>
+        </member>
+        <member name="F:Google.Maps.ServiceResponseStatus.RequestDenied">
+            <summary>
+            Indicates that your request was denied, generally because of lack
+            of a sensor parameter.
+            </summary>
+        </member>
+        <member name="T:Google.Maps.Geocoding.GeocodingService">
+            <summary>
+            Provides a direct way to access a geocoder via an HTTP request.
+            Additionally, the service allows you to perform the converse operation
+            (turning coordinates into addresses); this process is known as
+            "reverse geocoding."
+            </summary>
+        </member>
+        <member name="M:Google.Maps.Geocoding.GeocodingService.GetResponse(Google.Maps.Geocoding.GeocodingRequest)">
+            <summary>
+            Sends the specified request to the Google Maps Geocoding web
+            service and parses the response as an GeocodingResponse
+            object.
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="F:Google.Maps.Geocoding.LocationType.Unknown">
+            <summary>
+            Unknown
+            </summary>
+        </member>
+        <member name="F:Google.Maps.Geocoding.LocationType.Rooftop">
+            <summary>
+            Indicates that the returned result is a precise geocode for which we have
+            location information accurate down to street address precision.
+            </summary>
+        </member>
+        <member name="F:Google.Maps.Geocoding.LocationType.RangeInterpolated">
+            <summary>
+            Indicates that the returned result reflects an approximation (usually on
+            a road) interpolated between two precise points (such as intersections).
+            Interpolated results are generally returned when rooftop geocodes are
+            unavailable for a street address.
+            </summary>
+        </member>
+        <member name="F:Google.Maps.Geocoding.LocationType.GeometricCenter">
+            <summary>
+            Indicates that the returned result is the geometric center of a result
+            such as a polyline (for example, a street) or polygon (region).
+            </summary>
+        </member>
+        <member name="F:Google.Maps.Geocoding.LocationType.Approximate">
+            <summary>
+            Indicates that the returned result is approximate.
+            </summary>
+        </member>
+        <member name="T:Google.Maps.StaticMaps.StaticMapRequest">
+            <summary>
+            The Google Static Maps API returns an image (either GIF, PNG or JPEG)
+            in response to a HTTP request via a URL. For each request, you can
+            specify the location of the map, the size of the image, the zoom level,
+            the type of map, and the placement of optional markers at locations on
+            the map.
+            </summary>
+        </member>
+        <member name="M:Google.Maps.StaticMaps.StaticMapRequest.GetPathsStr">
+            <summary>
+            Builds path uri parameter
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Google.Maps.StaticMaps.StaticMapRequest.GetColorEncoded(System.Drawing.Color,System.Boolean)">
+            <summary>
+            The color encoding for google static maps API puts the alpha last (0xrrggbbaa)
+            whereas .NET encodes it alpha first by default (0xaarrggbb).
+            </summary>
+        </member>
+        <member name="M:Google.Maps.StaticMaps.StaticMapRequest.GetVisibleStr">
+            <summary>
+            Builds visible uri parameter
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Google.Maps.StaticMaps.StaticMapRequest.GetMarkersStr">
+            <summary>
+            Builds markers uri parameter(s)
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Google.Maps.StaticMaps.StaticMapRequest.Center">
+            <summary>
+            Defines the center of the map, equidistant from all edges of the
+            map. This parameter takes an <see cref="T:Google.Maps.Location"/>-derived instance identifying a
+            unique location on the face of the earth. Use <see cref="T:Google.Maps.LatLng"/> for a 
+            {latitude,longitude} pair (e.g. 40.714728,-73.998672) or use <see cref="T:Google.Maps.Location"/> for a 
+            string address (e.g. "city hall, new york, ny"). (Required if markers not present.)
+            </summary>
+            <remarks>http://code.google.com/apis/maps/documentation/staticmaps/#Locations</remarks>
+        </member>
+        <member name="P:Google.Maps.StaticMaps.StaticMapRequest.Zoom">
+            <summary>
+            Defines the zoom level of the map, which determines the
+            magnification level of the map. This parameter takes a numerical
+            value corresponding to the zoom level of the region desired. (Required if markers not present)
+            </summary>
+            <remarks>http://code.google.com/apis/maps/documentation/staticmaps/#Zoomlevels</remarks>
+        </member>
+        <member name="P:Google.Maps.StaticMaps.StaticMapRequest.Size">
+            <summary>
+            Defines the rectangular dimensions of the map image. This parameter
+            takes a string of the form valuexvalue where horizontal pixels are
+            denoted first while vertical pixels are denoted second. For example,
+            500x400 defines a map 500 pixels wide by 400 pixels high. If you
+            create a static map that is 100 pixels wide or smaller, the
+            "Powered by Google" logo is automatically reduced in size. (required)
+            </summary>
+        </member>
+        <member name="P:Google.Maps.StaticMaps.StaticMapRequest.Scale">
+            <summary>
+            affects the number of pixels that are returned. scale=2 returns twice as many pixels as scale=1 
+            while retaining the same coverage area and level of detail (i.e. the contents of the map don't change). 
+            This is useful when developing for high-resolution displays, or when generating a map for printing. 
+            The default value is 1. Accepted values are 2 and 4 (4 is only available to Maps API for Business customers.)
+            </summary>
+            <remarks>http://code.google.com/apis/maps/documentation/staticmaps/#scale_values</remarks>
+        </member>
+        <member name="P:Google.Maps.StaticMaps.StaticMapRequest.Format">
+            <summary>
+            Defines the format of the resulting image. By default, the Static
+            Maps API creates PNG images. There are several possible formats
+            including GIF, JPEG and PNG types. Which format you use depends on
+            how you intend to present the image. JPEG typically provides
+            greater compression, while GIF and PNG provide greater detail. (optional)
+            </summary>
+            <remarks>http://code.google.com/apis/maps/documentation/staticmaps/#ImageFormats</remarks>
+        </member>
+        <member name="P:Google.Maps.StaticMaps.StaticMapRequest.MapType">
+            <summary>
+            Defines the type of map to construct. There are several possible
+            maptype values, including roadmap, satellite, hybrid, and terrain. (optional)
+            </summary>
+            <remarks>http://code.google.com/apis/maps/documentation/staticmaps/#MapTypes</remarks>
+        </member>
+        <member name="P:Google.Maps.StaticMaps.StaticMapRequest.Language">
+            <summary>
+            Defines the language to use for display of labels on map tiles. Note
+            that this parameter is only supported for some country tiles; if the
+            specific language requested is not supported for the tile set, then
+            the default language for that tileset will be used. (optional)
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="P:Google.Maps.StaticMaps.StaticMapRequest.Region">
+            <summary>
+            defines the appropriate borders to display, based on geo-political sensitivities. 
+            Accepts a region code specified as a two-character ccTLD ('top-level domain') value. (optional)
+            </summary>
+        </member>
+        <member name="P:Google.Maps.StaticMaps.StaticMapRequest.Markers">
+            <summary>
+            Define one or more markers to attach to the image at specified
+            locations. This parameter takes a single marker definition with
+            parameters separated by the pipe character (|). Multiple markers
+            may be placed within the same markers parameter as long as they
+            exhibit the same style; you may add additional markers of
+            differing styles by adding additional markers parameters. Note that
+            if you supply markers for a map, you do not need to specify the
+            (normally required) center and zoom parameters. (optional)
+            </summary>
+            <remarks>http://code.google.com/apis/maps/documentation/staticmaps/#Markers</remarks>
+        </member>
+        <member name="P:Google.Maps.StaticMaps.StaticMapRequest.Path">
+            <summary>
+            For backwards-compatibility; shortcut for Paths when not using
+            multiple paths.
+            </summary>
+        </member>
+        <member name="P:Google.Maps.StaticMaps.StaticMapRequest.Paths">
+            <summary>
+            Defines a single path of two or more connected points to overlay on
+            the image at specified locations. This parameter takes a string of
+            point definitions separated by the pipe character (|). You may
+            supply additional paths by adding additional path parameters. Note
+            that if you supply a path for a map, you do not need to specify the
+            (normally required) center and zoom parameters. (optional)
+            </summary>
+            <remarks>http://code.google.com/apis/maps/documentation/staticmaps/#Paths</remarks>
+        </member>
+        <member name="P:Google.Maps.StaticMaps.StaticMapRequest.Visible">
+            <summary>
+            Specifies one or more locations that should remain visible on the
+            map, though no markers or other indicators will be displayed. Use
+            this parameter to ensure that certain features or map locations
+            are shown on the static map. (optional)
+            </summary>
+            <remarks>http://code.google.com/apis/maps/documentation/staticmaps/#Paths</remarks>
+        </member>
+        <member name="P:Google.Maps.StaticMaps.StaticMapRequest.Sensor">
+            <summary>
+            Specifies whether the application requesting the static map is
+            using a sensor to determine the user's location. This parameter
+            is required for all static map requests. (required)
+            </summary>
+            <remarks>http://code.google.com/apis/maps/documentation/staticmaps/#Sensor</remarks>
+        </member>
+        <member name="T:Google.Maps.StaticMaps.StaticMapService">
+            <summary>
+            The Google Static Maps API lets you embed a Google Maps image on your web page without requiring JavaScript or any dynamic page 
+            loading. The Google Static Map service creates your map based on URL parameters sent through a standard HTTP request and returns the 
+            map as an image you can display on your web page.
+            </summary>
+            <see cref="!:https://developers.google.com/maps/documentation/staticmaps/"/>
+        </member>
+        <member name="M:Google.Maps.StaticMaps.StaticMapService.GetImageBytes(Google.Maps.StaticMaps.StaticMapRequest)">
+            <summary>
+            Retrieves a map and returns back the image bytes
+            </summary>
+            <param name="request"></param>
+            <returns>byte array of the image bytes</returns>
+        </member>
+        <member name="M:Google.Maps.StaticMaps.StaticMapService.GetMapToStream(Google.Maps.StaticMaps.StaticMapRequest,System.IO.Stream)">
+            <summary>
+            Retrieves the map with the given request and writes the image bytes to the given target stream.
+            </summary>
+            <param name="request"></param>
+            <param name="targetStream"></param>
+            <returns>number of bytes written to the target stream</returns>
+        </member>
+        <member name="M:Google.Maps.StaticMaps.StaticMapService.GetMap(Google.Maps.Location,System.Int32,System.Boolean)">
+            <summary>
+            Retrieves a static map image at a default size of 512x512 with the given parameters.
+            </summary>
+            <param name="center"></param>
+            <param name="zoom"></param>
+            <param name="sensor"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Google.Maps.StaticMaps.StaticMapService.GetMap(Google.Maps.Location,System.Int32,Google.Maps.GMapsImageFormats,System.Boolean)">
+            <summary>
+            Retrieves a static map image at a default size of 512x512 and using the specified image format.
+            </summary>
+            <param name="center">A location to center the map on</param>
+            <param name="zoom">Zoom level to use</param>
+            <param name="sensor">Pass true if the location was provided via a sensor</param>
+            <param name="imageFormat">The format of the image</param>
+            <returns></returns>
+        </member>
+        <member name="M:Google.Maps.StaticMaps.StaticMapService.GetMap(Google.Maps.Location,System.Int32,System.Drawing.Size,Google.Maps.GMapsImageFormats,System.Boolean)">
+            <summary>
+            Retrieves a static map image at a default size of 512x512 and using the specified image format.
+            </summary>
+            <param name="center">A location to center the map on</param>
+            <param name="zoom">Zoom level to use</param>
+            <param name="sensor">Pass true if the location was provided via a sensor</param>
+            <param name="imageFormat">The format of the image</param>
+            <returns></returns>
+        </member>
+        <member name="T:Google.Maps.TravelMode">
+            <summary>
+            When you calculate directions, you may specify which transportation mode to use. By default, directions are calculated as driving directions. The following travel modes are currently supported:
+            Note: Both walking and bicycling directions may sometimes not include clear pedestrian or bicycling paths, so these directions will return warnings in the returned result which you must display to the user.
+            </summary>
+            <see cref="!:http://code.google.com/apis/maps/documentation/directions/#TravelModes"/>
+        </member>
+        <member name="F:Google.Maps.TravelMode.driving">
+            <summary>
+            (default) indicates standard driving directions using the road network.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "F:Google.Maps.TravelMode.walking" -->
+        <!-- Badly formed XML comment ignored for member "F:Google.Maps.TravelMode.bicycling" -->
+        <member name="T:Google.Maps.Units">
+            <summary>
+             When you calculate Directions Matrix, you may specify which Unit system mode to use. 
+             By default, directions are showes as metric. The following units system modes are currently supported:
+            </summary>
+        </member>
+        <member name="F:Google.Maps.Units.metric">
+            <summary>
+            (default) Returns distances in kilometers and meters
+            </summary>
+        </member>
+        <member name="F:Google.Maps.Units.imperial">
+            <summary>
+             returns distances in miles and feet
+            </summary>
+        </member>
+        <member name="M:Google.Maps.ViaLatLng.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Google.Maps.ViaLatLng"/> class.
+            </summary>
+        </member>
+        <member name="M:Google.Maps.ViaLatLng.#ctor(System.Decimal,System.Decimal)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Google.Maps.ViaLatLng"/> class with the given latitude and longitude coordinates.
+            </summary>
+            <param name="latitude">Latitude coordinates.</param>
+            <param name="longitude">Longitude coordinates.</param>
+        </member>
+        <member name="M:Google.Maps.ViaLatLng.#ctor(System.Double,System.Double)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Google.Maps.ViaLatLng"/> class with the given latitude and longitude coordinates.
+            </summary>
+            <param name="latitude">Latitude coordinates.</param>
+            <param name="longitude">Longitude coordinates.</param>
+        </member>
+        <member name="M:Google.Maps.ViaLatLng.#ctor(System.Single,System.Single)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Google.Maps.ViaLatLng"/> class with the given latitude and longitude coordinates.
+            </summary>
+            <param name="latitude">Latitude coordinates.</param>
+            <param name="longitude">Longitude coordinates.</param>
+        </member>
+        <member name="M:Google.Maps.ViaLatLng.ToString">
+            <summary>
+            Gets the string representation of the latitude and longitude coordinates. Default format is "N6" for 6 decimal precision.
+            </summary>
+            <returns>Latitude and longitude coordinates.</returns>
+        </member>
+        <member name="M:Google.Maps.ViaLatLng.ToString(System.String)">
+            <summary>
+            Gets the string representation of the latitude and longitude coordinates. The format is applies to a System.Double, so any format applicable for System.Double will work.
+            </summary>
+            <param name="format"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Google.Maps.ViaLatLng.GetAsUrlParameter">
+            <summary>
+            Gets the current instance as a URL encoded value.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Google.Maps.ViaLatLng.Parse(System.String)">
+            <summary>
+            Parses a ViaLatLng from a set of latitude/longitude coordinates
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Google.Maps.ViaLatLng.Latitude">
+            <summary>
+            Gets the latitude coordinate.
+            </summary>
+        </member>
+        <member name="P:Google.Maps.ViaLatLng.Longitude">
+            <summary>
+            Gets the longitude coordinate.
+            </summary>
+        </member>
+    </members>
+</doc>
